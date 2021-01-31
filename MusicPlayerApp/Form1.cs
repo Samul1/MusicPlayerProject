@@ -64,6 +64,7 @@ namespace MusicPlayerApp
             this.Close();
         }
 
+        #region "Dragging a Music Player Window"
         private void TopPanel_MouseMove(object sender, MouseEventArgs e)
         {
             // Code to move the window by dragging top of the window
@@ -73,12 +74,14 @@ namespace MusicPlayerApp
                 this.Top += e.Y - lastPoint.Y;
             }
         }
+
         // Declare a variable for the lastpoint
         Point lastPoint;
+
         private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
-
+        #endregion
     }
 }
